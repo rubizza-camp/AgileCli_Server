@@ -1,6 +1,6 @@
 # Agile Cli Server
 
-Here is the server side of AgailCli. If you need information about gem follow the link below.
+Here is the server side of AgileCli. If you need information about gem follow the link below.
 
 # Agile Cli Client
 
@@ -8,17 +8,11 @@ https://github.com/rubizza-camp/AgileCli
 
 ## Contacts
 
-Telegram
+[Telegram](https://t.me/agilepod)
 
-https://t.me/agilepod
+[GoogleDrive](https://drive.google.com/drive/folders/1N7fMJFVe09M5Cjfta86SCtbWEr_sBdoe)
 
-GoogleDrive
-
-https://drive.google.com/drive/folders/1N7fMJFVe09M5Cjfta86SCtbWEr_sBdoe
-
-Trello
-
-https://trello.com/b/dLrdzQZp/agile-cli
+[Trello](https://trello.com/b/dLrdzQZp/agile-cli)
 
 ## Developers
 
@@ -37,3 +31,7 @@ https://trello.com/b/dLrdzQZp/agile-cli
 * Sprint Planning - 12:00 - 13:00, Monday
 * Sprint Review - 11:15 - 13:00, Thurshday
 * Demo - 10:00, Saturday
+
+## Heroku Link
+
+[Our server](https://limitless-badlands-65508.herokuapp.com)
