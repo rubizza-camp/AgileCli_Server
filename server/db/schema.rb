@@ -10,6 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+# rubocop:disable all
+
 ActiveRecord::Schema.define(version: 2019_08_10_112520) do
 
   # These are extensions that must be enabled in order to support this database
@@ -21,5 +23,5 @@ ActiveRecord::Schema.define(version: 2019_08_10_112520) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
 end
+# rubocop:enable all
