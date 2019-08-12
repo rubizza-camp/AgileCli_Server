@@ -8,6 +8,4 @@ RSpec.describe User, type: :model do
   it "should be valid" do
     @user.should be_valid
   end
-
-  
 end
