@@ -9,11 +9,6 @@ class CreateProjects < ActiveRecord::Migration[5.2]
       t.text :description
       t.text :BItem
       t.text :events
-
-      t.timestamps
     end
-
-    change_column_null :users, :name, true
-    change_column_null :users, :github, false
   end
 end
