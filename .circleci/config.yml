@@ -1,0 +1,25 @@
+jobs:
+  build:
+   docker:
+      - image: circleci/ruby:2.6.3-node
+        environment:
+          RAILS_ENV: test
+          PGHOST: 127.0.0.1
+          PGUSER: agile
+      - image: circleci/postgres:latest
+        environment:
+          POSTGRES_USER: agile
+          POSTGRES_DB: server_test
+   working_directory: ~/server
+   steps:
+      - checkout
+      - run: |
+          yarn install --check-files
+          bundle install
+      - run: |
+          sudo apt install -y postgresql-client || true
+          
+      - run: |
+          bundle exec rake db:create
+          bundle exec rake db:migrate
+          bundle exec rspec
