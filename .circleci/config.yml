@@ -10,7 +10,7 @@ jobs:
         environment:
           POSTGRES_USER: agile
           POSTGRES_DB: server_test
-   working_directory: ~/
+   working_directory: ../agilecli_server
    steps:
       - checkout
       - run: |
