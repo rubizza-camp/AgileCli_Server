@@ -1,6 +1,5 @@
 jobs:
   build:
-   working_directory: ~/AgileCli_Server
    docker:
       - image: circleci/ruby:2.6.3-node
         environment:
@@ -11,6 +10,7 @@ jobs:
         environment:
           POSTGRES_USER: agile
           POSTGRES_DB: server_test
+   working_directory: ~/AgileCli_Server
    steps:
       - checkout
       - run: |
