@@ -10,7 +10,7 @@ jobs:
         environment:
           POSTGRES_USER: agile
           POSTGRES_DB: server_test
-   working_directory: ~/server
+   working_directory: ~/
    steps:
       - checkout
       - run: |
@@ -18,7 +18,7 @@ jobs:
           bundle install
       - run: |
           sudo apt install -y postgresql-client || true
-          
+
       - run: |
           bundle exec rake db:create
           bundle exec rake db:migrate
