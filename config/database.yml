@@ -21,6 +21,7 @@
       host: localhost
       pool: 5
       timeout: 5000
+      user: agile
 
       # Connect on a TCP socket. Omitted by default since the client uses a
       # domain socket that doesn't need configuration. Windows does not have
@@ -50,3 +51,4 @@
       host: localhost
       pool: 5
       timeout: 5000
+      user: agile
