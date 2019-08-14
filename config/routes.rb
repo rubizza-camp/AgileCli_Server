@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users, only: %i[index create show update destroy]
+      resources :projects, only: %i[index create show update destroy]
       resources :microposts, only: %i[index create show update destroy]
     end
   end
