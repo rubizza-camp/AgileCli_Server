@@ -1,1 +1,1 @@
-User.create(name: "one", github_login: "qwerty")
+Project.create(name: "first", description: "cool")
