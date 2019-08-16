@@ -6,13 +6,13 @@ class Api::V1::ProjectsController < Api::V1::BaseController
   end
 
   def show
-    @project ? ProjectSerializer.new(@project).serialized_json : create
+    @project ? render(json: ProjectSerializer.new(@project).serialized_json) : create
   end
 
   # POST method
   def create
     @project = Project.new(name: params[:name])
-    ProjectSerializer.new(@project).serialized_json if @project.save
+    render(json: ProjectSerializer.new(@project).serialized_json) if @project.save
   end
 
   def destroy
