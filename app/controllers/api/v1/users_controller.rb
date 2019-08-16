@@ -9,9 +9,9 @@ class Api::V1::UsersController < Api::V1::BaseController
   end
 
   # GET method
-  def new
-    @user = User.new
-  end
+  # def new
+  #   @user = User.new
+  # end
 
   # POST method
   def create
