@@ -8,11 +8,6 @@ class Api::V1::UsersController < Api::V1::BaseController
     @user ? render(json: Api::V1::UserSerializer.new(@user).to_json) : create
   end
 
-  # GET method
-  # def new
-  #   @user = User.new
-  # end
-
   # POST method
   def create
     @user = User.new(github_login: params[:id])
