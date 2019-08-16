@@ -20,7 +20,8 @@ class Api::V1::ProjectsController < Api::V1::BaseController
   end
 
   def update
-    @project.update_attributes(name: new_name)
+    require 'pry'; binding.pry
+    @project.update(project_params)
   end
 
   private
@@ -30,7 +31,8 @@ class Api::V1::ProjectsController < Api::V1::BaseController
   end
 
   def project_params
-    params.require(:project).permit(:id, :name, :new_name)
+    {name: params[:new_name]}
+    # params.permit(name: new_name)
   end
 
 end
