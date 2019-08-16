@@ -20,7 +20,6 @@ class Api::V1::ProjectsController < Api::V1::BaseController
   end
 
   def update
-    require 'pry'; binding.pry
     @project.update(project_params)
   end
 
@@ -32,6 +31,5 @@ class Api::V1::ProjectsController < Api::V1::BaseController
 
   def project_params
     {name: params[:new_name]}
-    # params.permit(name: new_name)
   end
 end
