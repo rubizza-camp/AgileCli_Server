@@ -1,6 +1,6 @@
 class Api::V1::BaseSerializer
   include FastJsonapi::ObjectSerializer
-  
+
   def created_at
     object.created_at.in_time_zone.iso8601 if created
   end
