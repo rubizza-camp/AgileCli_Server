@@ -1,3 +1,3 @@
 class Api::V1::UserSerializer < Api::V1::BaseSerializer
-  attributes :id, :name, :github_login
+  attributes :id, :github_login
 end
