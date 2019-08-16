@@ -9,11 +9,6 @@ class Api::V1::ProjectsController < Api::V1::BaseController
     @project ? render(json: Api::V1::ProjectSerializer.new(@project).to_json) : create
   end
 
-   # GET method
-  # def new
-  #   @project = Project.new
-  # end
-
   # POST method
   def create
     @project = Project.new(name: params[:name])
@@ -21,7 +16,6 @@ class Api::V1::ProjectsController < Api::V1::BaseController
   end
 
   def destroy
-
     @project.destroy
   end
 
@@ -32,7 +26,6 @@ class Api::V1::ProjectsController < Api::V1::BaseController
   private
 
   def fetch_project
-    
     @project = Project.find_by(name: params[:name])
   end
 
