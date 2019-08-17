@@ -1,35 +1,34 @@
 class Api::V1::ProjectsController < Api::V1::BaseController
-  before_action :fetch_project, only: [:show, :destroy, :update]
 
   def index
     render(json: Project.all)
   end
 
   def show
-    @project ? render(json: ProjectSerializer.new(@project).serialized_json) : create
+    render(json: ProjectSerializer.new(project).serialized_json) 
   end
 
   # POST method
   def create
-    @project = Project.new(name: params[:name])
-    render(json: ProjectSerializer.new(@project).serialized_json) if @project.save
+    project = Project.new(name: params[:name])
+    render(json: ProjectSerializer.new(project).serialized_json) if project.save
   end
 
   def destroy
-    @project.destroy
+    Project.find_by(name: params[:id]).destroy
   end
 
   def update
-    @project.update(project_params)
+    project.update(project_params)
   end
 
   private
 
-  def fetch_project
-    @project = Project.find_by(name: params[:name])
+  def project
+    @project ||= Project.find_by(name: params[:name])
   end
 
   def project_params
-    {name: params[:new_name]}
+    { name: params[:new_name] }
   end
 end
