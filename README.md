@@ -34,4 +34,4 @@ https://github.com/rubizza-camp/AgileCli
 
 ## Heroku Link
 
-[Our server](https://limitless-badlands-65508.herokuapp.com)
+[Our server](https://agile-cli.herokuapp.com)
