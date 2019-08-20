@@ -11,11 +11,15 @@ a {
     background-color: transparent;
 }
 
-.head-text-collor {
-  color: #1B1B1B;
+.navbar-dark .navbar-brand {
+    color: #E4E4E4;
 }
 
-.bd-placeholder-img {
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(27, 27, 27);
+
+
+}.bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
   -webkit-user-select: none;
