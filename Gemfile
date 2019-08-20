@@ -17,8 +17,11 @@ gem "uglifier", ">= 1.3.0"
 # gem 'mini_racer', platforms: :ruby
 gem "pg"
 
-gem 'webpacker'
-gem 'react-rails'
+gem "bootstrap", "~> 4.3.1"
+gem "jquery-rails"
+
+gem "react-rails"
+gem "webpacker"
 
 # Use CoffeeScript for .coffee assets and views
 gem "coffee-rails", "~> 4.2"
