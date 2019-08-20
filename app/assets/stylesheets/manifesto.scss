@@ -1,12 +1,12 @@
 // Place all the styles related to the Manifesto controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-h1 {
+h2 {
   // font-family: "Futura Font", Futura, serif;
   font: futur;
   // src: url(futur.ttf);
   // src: url('.../FuturaStdRegular.woff') format("WOFF");
-  font-size: 220%;
+  font-size: 200%;
   text-align: center;
   font-weight: bolder;
   font-style: italic;
@@ -34,6 +34,10 @@ body {
   font-size: 15px;
 }
 
+.bg-dark {
+    background-color: #F1684E !important;
+}
+
 #flexbox {
   display: flex;
   flex-wrap: wrap;
@@ -46,7 +50,7 @@ body {
 
 #flexbox > p {
   flex: 1 1 auto;
-  width: 300px;
+  width: 400px;
   height: 80px;
-  font-size: 16px;
+  font-size: 17px;
 }
