@@ -5,6 +5,11 @@ ruby "2.6.3"
 
 gem "activerecord", "~> 5.2.3"
 
+gem "rest-client"
+
+gem "dotenv-rails", require: "dotenv/rails-now"
+
+gem "octokit"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 5.2.3"
 # Use Puma as the app server
