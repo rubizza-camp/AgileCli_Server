@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>AgileCli</title>
-    <%= stylesheet_link_tag 'welcome' %>
+    <%= stylesheet_link_tag 'manifesto' %>
 </head>
 
 <body>
-  <p><%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %></p>
-
+  <header>
+    <hr class="featurette-divider">
+    <hr class="featurette-divider">
+    <hr class="featurette-divider">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/">AgileCli</a>
+    </nav>
+  </header>
+  <!-- <p><%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %></p> -->
+  <div id="flexbox">
     <h1>Manifesto for Agile Software Development</h1>
-    <p>Individuals and interactions over processes and tools</p>
-    <p>Working software over comprehensive documentation</p>
-    <p>Customer collaboration over contract negotiation</p>
-    <p>Responding to change over following a plan</p>
+    <div class="values">
+      <p>Individuals and interactions over processes and tools</p>
+      <p>Working software over comprehensive documentation</p>
+      <p>Customer collaboration over contract negotiation</p>
+      <p>Responding to change over following a plan</p>
+    </div>
     <h1>Principles behind the Agile Manifesto</h1>
     <p>Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.</p>
     <p>Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.</p>
@@ -28,5 +38,6 @@
     <p>Simplicity--the art of maximizing the amount of work not done--is essential.</p>
     <p>The best architectures, requirements, and designs emerge from self-organizing teams.</p>
     <p>At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.</p>
+  </div>
 </body>
 </html>
