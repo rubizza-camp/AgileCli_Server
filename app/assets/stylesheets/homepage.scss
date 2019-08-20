@@ -1,3 +1,44 @@
 // Place all the styles related to the Homepage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    background-color: #E4E4E4;
+}
+
+a {
+    color: #E4E4E4;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.head-text-collor {
+  color: #1B1B1B;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.btn-secondary {
+    color: #E4E4E4;
+    background-color: #F1684E;
+    border-color: #F1684E;
+}
+.bg-dark {
+    background-color: #F1684E !important;
+}
+
+.bg-dark-footer {
+    background-color: #1B1B1B !important;
+}
