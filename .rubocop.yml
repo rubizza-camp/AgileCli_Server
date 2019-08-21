@@ -48,4 +48,4 @@ Style/BlockDelimiters:
 Metrics/BlockLength:
   Exclude:
     - '**/*.rake'
-    - 'spec/**/*.rb'- 'db/schema.rb'
+    - 'spec/**/*.rb'
