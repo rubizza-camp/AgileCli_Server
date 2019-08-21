@@ -44,9 +44,9 @@ body {
 
 .bg-dark {
   background-color: $orange;
+  border-bottom-color: $shadow;
   border-bottom-style: solid;
   border-bottom-width: 5px;
-  border-bottom-color: $shadow;
   box-shadow: inset 0 -2px 0 0 $unknown-color;
 }
 
