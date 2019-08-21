@@ -236,6 +236,9 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    sawyer (0.8.2)
+      addressable (>= 2.3.5)
+      faraday (> 0.8, < 2.0)
     selenium-webdriver (3.142.3)
       childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
@@ -309,6 +312,7 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.3)
   react-rails
+  rest-client
   rspec-rails
   sass-rails (~> 5.0)
   selenium-webdriver
