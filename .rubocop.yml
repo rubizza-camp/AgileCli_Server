@@ -29,10 +29,21 @@ Style/SymbolArray:
 
 AllCops:
   Exclude:
-    - 'db/schema.rb'
-    - 'db/migrate/*.rb'
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
     - 'Rakefile'
-    - 'config.ru'
-    - 'bin/*'
     - 'vendor/**/*'
-    - 'db/schema.rb'
+
+Style/BracesAroundHashParameters:
+  Exclude:
+    - spec/**/*_spec.rb
+
+Style/BlockDelimiters:
+  Exclude:
+    - spec/**/*_spec.rb
+
+Metrics/BlockLength:
+  Exclude:
+    - '**/*.rake'
+    - 'spec/**/*.rb'- 'db/schema.rb'
