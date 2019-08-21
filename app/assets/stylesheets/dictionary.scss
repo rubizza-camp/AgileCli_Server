@@ -27,11 +27,11 @@ $green: #008000;
   background-color: $black;
   border: 1px solid $green;
   border-radius: 6px;
-  padding-left: 1%;
-  width: 20%;
+  color: $orange;
   font: futur;
   font-weight: normal;
-  color: $orange;
+  padding-left: 1%;
+  width: 20%;
 }
 
 a {
@@ -44,7 +44,7 @@ a:hover {
 
 body {
   font: futur;
-  background-color: #e4e4e4;
+  background-color: $gray;
   color: $black;
 }
 
@@ -61,14 +61,14 @@ body {
   background-color: $black;
 }
 
-.PO {
+.po {
   padding-left: 30px;
 }
 
 .jepa {
+  background-color: $orange;
+  border-bottom-color: $another-color;
   border-bottom-style: solid;
   border-bottom-width: 5px;
-  border-bottom-color: $another-color;
   box-shadow: inset 0 -2px 0 0 $unknown-color;
-  background-color: $orange;
 }
