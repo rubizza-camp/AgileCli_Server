@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "homepage/start"
   get "manifesto/agile"
   get "homepage/homepage"
   get "dictionary/dictionary"
