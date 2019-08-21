@@ -29,6 +29,7 @@ Style/SymbolArray:
 
 AllCops:
   Exclude:
+    - 'app/assets/**/*'
     - 'bin/**/*'
     - 'db/**/*'
     - 'config/**/*'
