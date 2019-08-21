@@ -1,6 +1,11 @@
 // Place all the styles related to the Manifesto controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$body-text-color: #1b1b1b;
+$body-background-color: #e4e4e4;
+$stange-color: #f1684e;
+$another-color: #1d1f21;
+
 h2 {
   font: futur;
   font-size: 200%;
@@ -21,8 +26,8 @@ p {
 }
 
 body {
-  background-color: #e4e4e4;
-  color: #1b1b1b;
+  background-color: $body-background-color;
+  color: $body-text-color;
   background-size: 100%;
 }
 
@@ -31,29 +36,25 @@ body {
 }
 
 .btn-secondary {
-  color: #e4e4e4;
-  background-color: #f1684e;
-  border-color: #f1684e;
+  color: $body-background-color;
+  background-color: $stange-color;
+  border-color: $stange-color;
   }
 
 .bg-dark {
+  background-color: $stange-color;
   border-bottom-style: solid;
   border-bottom-width: 5px;
-  border-bottom-color: #1d1f21;
+  border-bottom-color: $another-color;
   box-shadow: inset 0 -2px 0 0 rgba(255,255,255,0.3);
-  background-color: #f1684e !important;
-}
-
-.bg-dark {
-  background-color: #f1684e !important;
 }
 
 .bg-dark-footer {
-  background-color: #1b1b1b !important;
+  background-color: $body-text-color;
 }
 
 a {
-  color: #e4e4e4;
+  color: $body-background-color;
   text-decoration: none;
   background-color: transparent;
 }
