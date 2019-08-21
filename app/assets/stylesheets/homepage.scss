@@ -13,6 +13,7 @@ body {
 .blask{
   color: $black;
 }
+
 .blask:hover{
   color: $black;
 }
@@ -25,9 +26,9 @@ a {
 
 //  кнопка
 .btn-secondary {
-  color: $gray;
   background-color: $orange;
   border-color: $orange;
+  color: $gray;
 }
 // хедер
 .jepa{
