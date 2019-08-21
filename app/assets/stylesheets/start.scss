@@ -1,21 +1,26 @@
 // Place all the styles related to the Homepage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$black: #1b1b1b;
+$grey: #e4e4e4;
+$orange: #f1684e;
+$shadow: #1d1f21;
+$unknown-color: rgba(255,255,255,0.3);
 //  фон
 body {
-  background-color: #e4e4e4;
+  background-color: $grey;
 }
 
 //  ссылки
 a {
-  color: #e4e4e4;
+  color: $grey;
   text-decoration: none;
   background-color: transparent;
 }
 
 // цвет ткста хэдэра
 .navbar-dark .navbar-brand {
-  color: #e4e4e4;
+  color: $grey;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -38,19 +43,19 @@ a {
 }
 //  кнопка
 .btn-secondary {
-  color: #e4e4e4;
-  background-color: #f1684e;
-  border-color: #f1684e;
+  color: $grey;
+  background-color: $orange;
+  border-color: $orange;
 }
 // хедер
 .bg-dark {
   border-bottom-style: solid;
   border-bottom-width: 5px;
-  border-bottom-color: #1d1f21;
-  box-shadow: inset 0 -2px 0 0 rgba(255,255,255,0.3);
-  background-color: #f1684e !important;
+  border-bottom-color: $shadow;
+  box-shadow: inset 0 -2px 0 0 $unknown-color;
+  background-color: $orange !important;
 }
 // фон футера
 .bg-dark-footer {
-  background-color: #1B1B1B !important;
+  background-color: $black !important;
 }
