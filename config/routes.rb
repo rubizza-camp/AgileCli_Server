@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get "manifesto/agile"
   get "homepage/homepage"
+  get "dictionary/dictionary"
   root "homepage#homepage"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # get '/welcome/index', to "welcome#index"

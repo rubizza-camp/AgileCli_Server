@@ -1,0 +1,67 @@
+// Place all the styles related to the Manifesto controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h2 {
+  // font-family: "Futura Font", Futura, serif;
+  font: futur;
+  // src: url(futur.ttf);
+  // src: url('.../FuturaStdRegular.woff') format("WOFF");
+  font-size: 200%;
+  text-align: center;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: futur;
+  src: asset-url('futura/futur.ttf');
+}
+
+.content {
+  padding-left: 20px;
+  width: 300px;
+  border: 1px solid green;
+  border-width: 2px;
+  no-repeat: 10px 10px;
+}
+
+.content legend {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: brown;
+}
+
+p {
+  font: futur;
+  font-size: 120%;
+}
+
+body {
+  background-color: #E4E4E4;
+  color: #1B1B1B;
+  background-size: 100%;
+}
+
+.bg-dark {
+    background-color: #F1684E !important;
+}
+
+#flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 1300px;
+  grid-gap: 10%;
+}
+
+#flexbox > p {
+  flex: 1 1 auto;
+  width: 400px;
+  height: 80px;
+  font-size: 17px;
+}
+// Place all the styles related to the dictionary controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
