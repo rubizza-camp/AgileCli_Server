@@ -15,6 +15,9 @@ require "rails/test_unit/railtie"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+Dotenv::Railtie.load
+CLIENT_ID = ENV["CLIENT_ID"]
+CLIENT_SECRET = ENV["CLIENT_SECRET"]
 
 module Server
   class Application < Rails::Application
