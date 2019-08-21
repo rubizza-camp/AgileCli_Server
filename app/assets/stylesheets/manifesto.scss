@@ -60,19 +60,7 @@ a {
   text-decoration: none;
 }
 
-#flexbox {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  grid-gap: 10%;
-}
-
-#flexbox > p {
-  flex: 1 1 auto;
-  width: 400px;
-  height: 80px;
-  font-size: 17px;
+.manifesto {
+  margin:0 auto;
+  width: 38%;
 }
