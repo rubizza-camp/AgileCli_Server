@@ -1,4 +1,3 @@
 class ManifestoController < ApplicationController
-  def agile
-  end
+  def agile; end
 end
