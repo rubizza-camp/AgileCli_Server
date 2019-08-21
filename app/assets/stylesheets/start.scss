@@ -2,60 +2,38 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $black: #1b1b1b;
-$grey: #e4e4e4;
-$orange: #f1684e;
-$shadow: #1d1f21;
-$unknown-color: rgba(255,255,255,0.3);
+$gray: #e4e4e4;
+$orange: #ff6d51;
+
 //  фон
 body {
-  background-color: $grey;
+  background-color: $gray;
 }
 
+.blask{
+  color: $black;
+}
+.blask:hover{
+  color: $black;
+}
 //  ссылки
 a {
-  color: $grey;
+  color: $gray;
   text-decoration: none;
   background-color: transparent;
 }
 
-// цвет ткста хэдэра
-.navbar-dark .navbar-brand {
-  color: $grey;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-  color: rgb(27, 27, 27);
-
-//  хз что это
-}.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-}
 //  кнопка
 .btn-secondary {
-  color: $grey;
+  color: $gray;
   background-color: $orange;
   border-color: $orange;
 }
 // хедер
-.bg-dark {
-  border-bottom-style: solid;
-  border-bottom-width: 5px;
-  border-bottom-color: $shadow;
-  box-shadow: inset 0 -2px 0 0 $unknown-color;
-  background-color: $orange !important;
+.jepa{
+  background-color: $orange;
 }
 // фон футера
 .bg-dark-footer {
-  background-color: $black !important;
+  background-color: $black;
 }
