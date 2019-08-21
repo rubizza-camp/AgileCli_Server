@@ -17,21 +17,29 @@ h2 {
   src: asset-url('futura/futur.ttf');
 }
 
+.content {
+  padding-left: 20px;
+  width: 300px;
+  border: 1px solid green;
+  border-width: 2px;
+  no-repeat: 10px 10px;
+}
+
+.content legend {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: brown;
+}
+
 p {
   font: futur;
   font-size: 120%;
-  text-align: center;
 }
 
 body {
   background-color: #E4E4E4;
   color: #1B1B1B;
-  // background-image: url(agile.jpg);
   background-size: 100%;
-}
-
-.values {
-  font-size: 15px;
 }
 
 .bg-dark {
