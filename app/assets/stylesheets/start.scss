@@ -13,24 +13,25 @@ body {
 .blask {
   color: $black;
 }
+
 .blask:hover {
   color: $black;
 }
 //  ссылки
 a {
+  background-color: transparent;
   color: $gray;
   text-decoration: none;
-  background-color: transparent;
 }
 
 //  кнопка
 .btn-secondary {
-  color: $gray;
   background-color: $orange;
   border-color: $orange;
+  color: $gray;
 }
 // хедер
-.jepa{
+.jepa {
   background-color: $orange;
 }
 // фон футера

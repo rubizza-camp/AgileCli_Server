@@ -10,18 +10,18 @@ body {
   background-color: $gray;
 }
 
-.blask{
+.blask {
   color: $black;
 }
 
-.blask:hover{
+.blask:hover {
   color: $black;
 }
 //  ссылки
 a {
+  background-color: transparent;
   color: $gray;
   text-decoration: none;
-  background-color: transparent;
 }
 
 //  кнопка
@@ -31,7 +31,7 @@ a {
   color: $gray;
 }
 // хедер
-.jepa{
+.jepa {
   background-color: $orange;
 }
 // фон футера
