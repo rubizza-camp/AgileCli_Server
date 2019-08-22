@@ -9,6 +9,6 @@ class LoginController < ApplicationController
     client = Octokit::Client.new(access_token: access_token)
     user = client.user
     @user = User.new(github_login: user.login, node: user.node_id)
-    render(json: Api::V1::UserSerializer.new(@user).serialized_json) if @user.save
+    @user.save
   end
 end
