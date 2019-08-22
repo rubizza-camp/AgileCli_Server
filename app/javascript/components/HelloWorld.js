@@ -5,7 +5,7 @@ class HelloWorld extends React.Component {
     return (
       <React.Fragment>
         Greeting: {this.props.greeting}
-        <p>Пиписька</p>
+        <h1>POLINA</h1>
       </React.Fragment>
     );
   }
