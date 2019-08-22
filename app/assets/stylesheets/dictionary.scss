@@ -9,7 +9,7 @@ $orange: #ff6d51;
 $white: #ffffff;
 
 @font-face {
-  font-family: 'Futura';
+  font-family: "Futura";
   src: asset-url('assets/futura/futur.ttf');
 }
 
@@ -68,8 +68,8 @@ body {
 .navigation {
   // display:inline;
   // white-space: nowrap;
-  padding-top: 53px;
   background-color: $black;
+  padding-top: 53px;
 }
 
 .background-header {
