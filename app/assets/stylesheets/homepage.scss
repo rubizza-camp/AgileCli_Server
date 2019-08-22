@@ -1,0 +1,38 @@
+// Place all the styles related to the Homepage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$black: #1b1b1b;
+$gray: #e4e4e4;
+$orange: #ff6d51;
+
+body {
+  background-color: $gray;
+}
+
+.blask {
+  color: $black;
+}
+
+.blask:hover {
+  color: $black;
+}
+
+a {
+  background-color: transparent;
+  color: $gray;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: $orange;
+  border-color: $orange;
+  color: $gray;
+}
+
+.background-header {
+  background-color: $orange;
+}
+
+.bg-dark-footer {
+  background-color: $black;
+}

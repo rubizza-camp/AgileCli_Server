@@ -1,0 +1,66 @@
+// Place all the styles related to the Manifesto controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$black: #1b1b1b;
+$grey: #e4e4e4;
+$orange: #f1684e;
+$shadow: #1d1f21;
+$unknown-color: rgba(255, 255, 255, 0.3);
+
+h2 {
+  font: futur;
+  font-size: 200%;
+  font-style: italic;
+  font-weight: bolder;
+  text-align: center;
+}
+
+@font-face {
+  font-family: futur;
+  src: asset-url("futura/futur.ttf");
+}
+
+p {
+  font: futur;
+  font-size: 120%;
+  text-align: center;
+}
+
+body {
+  background-color: $grey;
+  background-size: 100%;
+  color: $black;
+}
+
+.values {
+  font-size: 15px;
+}
+
+.btn-secondary {
+  background-color: $orange;
+  border-color: $orange;
+  color: $grey;
+  }
+
+.background-header {
+  background-color: $orange;
+  border-bottom-color: $shadow;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  box-shadow: inset 0 -2px 0 0 $unknown-color;
+}
+
+.bg-dark-footer {
+  background-color: $black;
+}
+
+a {
+  background-color: transparent;
+  color: $grey;
+  text-decoration: none;
+}
+
+.manifesto {
+  margin: 0 auto;
+  width: 38%;
+}
