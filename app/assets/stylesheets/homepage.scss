@@ -5,7 +5,6 @@ $black: #1b1b1b;
 $gray: #e4e4e4;
 $orange: #ff6d51;
 
-//  фон
 body {
   background-color: $gray;
 }
@@ -17,24 +16,41 @@ body {
 .blask:hover {
   color: $black;
 }
-//  ссылки
+
+.blask-git {
+  color: $gray;
+}
+
+.blask-git:hover {
+  color: $gray;
+}
+
+.btn-git {
+  background-color: $black;
+  border-color: $orange;
+  color: $gray;
+}
+
 a {
   background-color: transparent;
   color: $gray;
   text-decoration: none;
 }
 
-//  кнопка
 .btn-secondary {
   background-color: $orange;
   border-color: $orange;
   color: $gray;
 }
-// хедер
-.jepa {
+
+.background-header {
   background-color: $orange;
 }
-// фон футера
+
 .bg-dark-footer {
   background-color: $black;
+}
+
+.background-color-image{
+  background-color: $orange;
 }
