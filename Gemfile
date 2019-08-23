@@ -46,8 +46,8 @@ gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 
 # API
-gem "fast_jsonapi"
 gem "bcrypt"
+gem "fast_jsonapi"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

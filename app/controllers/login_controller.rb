@@ -2,7 +2,6 @@ require "bcrypt"
 
 class LoginController < ApplicationController
   def oauth
-    encryption_setup
     session_code = request.env["rack.request.query_hash"]["code"]
     response = RestClient.post("https://github.com/login/oauth/access_token",
                                { client_id: CLIENT_ID,
