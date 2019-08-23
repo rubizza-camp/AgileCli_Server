@@ -6,11 +6,11 @@ $unknown-color: rgba(255, 255, 255, 0.3);
 $black: #1b1b1b;
 $gray: #e4e4e4;
 $orange: #ff6d51;
-$green: #008000;
+$white: #ffffff;
 
 @font-face {
-  font-family: futur;
-  src: asset-url("futura/futur.ttf");
+  font-family: "Futura";
+  src: asset-url("assets/futura/futur.ttf");
 }
 
 .form {
@@ -23,29 +23,18 @@ $green: #008000;
   color: $gray;
 }
 
-.content {
-  background-color: $black;
-  border: 1px solid $green;
-  border-radius: 6px;
-  color: $orange;
-  font: futur;
-  font-weight: normal;
-  padding-left: 1%;
-  width: 20%;
-}
-
 a {
-  color: $orange;
+  color: $gray;
 }
 
 a:hover {
-  color: $gray;
+  color: $white;
 }
 
 body {
   background-color: $gray;
   color: $black;
-  font: futur;
+  font-family: "Futura";
 }
 
 .items {
@@ -53,22 +42,36 @@ body {
   width: 100%;
 }
 
-.item {
-  padding-left: 5px;
-}
-
 .bg-dark-footer {
   background-color: $black;
+  border-bottom: 1px solid $black;
+}
+
+.whole-page {
+  margin: 0 auto;
+  width: 80%;
 }
 
 .po {
   padding-left: 30px;
 }
 
+.custom {
+  padding-top: 59px;
+}
+
+.vertical-line {
+  background-color: $orange;
+  height: 10px;
+  width: 1px;
+}
+
+.navigation {
+  background-color: $black;
+  padding-top: 53px;
+}
+
 .background-header {
   background-color: $orange;
-  border-bottom-color: $another-color;
-  border-bottom-style: solid;
-  border-bottom-width: 5px;
   box-shadow: inset 0 -2px 0 0 $unknown-color;
 }

@@ -8,7 +8,6 @@ $shadow: #1d1f21;
 $unknown-color: rgba(255, 255, 255, 0.3);
 
 h2 {
-  font: futur;
   font-size: 200%;
   font-style: italic;
   font-weight: bolder;
@@ -16,12 +15,11 @@ h2 {
 }
 
 @font-face {
-  font-family: futur;
-  src: asset-url("futura/futur.ttf");
+  font-family: "Futur";
+  src: asset-url("assets/futura/futur");
 }
 
 p {
-  font: futur;
   font-size: 120%;
   text-align: center;
 }
@@ -30,6 +28,7 @@ body {
   background-color: $grey;
   background-size: 100%;
   color: $black;
+  font-family: "Futur";
 }
 
 .values {
