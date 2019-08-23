@@ -1,3 +1,26 @@
 // Place all the styles related to the Login controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$black: #1b1b1b;
+$gray: #e4e4e4;
+$orange: #ff6d51;
+
+a {
+  color: $gray
+}
+
+a:hover {
+  color: $black;
+}
+
+body {
+  background-color: $orange;
+}
+
+.login {
+  margin-top: 10%;
+}
+
+.color-text {
+  color: $gray;
+}
