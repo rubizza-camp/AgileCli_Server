@@ -1,5 +1,8 @@
+require "bcrypt"
+
 class LoginController < ApplicationController
   def oauth
+    encryption_setup
     session_code = request.env["rack.request.query_hash"]["code"]
     response = RestClient.post("https://github.com/login/oauth/access_token",
                                { client_id: CLIENT_ID,
@@ -8,7 +11,8 @@ class LoginController < ApplicationController
     access_token = JSON.parse(response)["access_token"]
     client = Octokit::Client.new(access_token: access_token)
     user = client.user
-    @user = User.new(github_login: user.login, node: user.node_id)
+    secret_node = BCrypt::Password.create(user.node_id)
+    @user = User.new(github_login: user.login, node: secret_node)
     @user.save
   end
 end
