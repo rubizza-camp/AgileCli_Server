@@ -17,6 +17,20 @@ body {
   color: $black;
 }
 
+.blask-git {
+  color: $gray;
+}
+
+.blask-git:hover {
+  color: $gray;
+}
+
+.btn-git {
+  background-color: $black;
+  border-color: $orange;
+  color: $gray;
+}
+
 a {
   background-color: transparent;
   color: $gray;
@@ -35,4 +49,8 @@ a {
 
 .bg-dark-footer {
   background-color: $black;
+}
+
+.background-color-image {
+  background-color: $orange;
 }

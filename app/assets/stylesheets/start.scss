@@ -5,8 +5,25 @@ $black: #1b1b1b;
 $gray: #e4e4e4;
 $orange: #ff6d51;
 
+@font-face {
+  font-family: futur;
+  src: asset-url("futura/futur.ttf");
+}
+
 body {
   background-color: $gray;
+  font-size: 25px;
+}
+
+html {
+  height: 100%;
+}
+
+
+h1 {
+  font-size: 70px;
+  font-style: italic;
+  font-weight: bolder;
 }
 
 .blask {
@@ -35,4 +52,12 @@ a {
 
 .bg-dark-footer {
   background-color: $black;
+}
+
+code {
+  background-color: $black;
+  border-radius: 5px;
+  color: $gray;
+  font-family: courier, monospace;
+  padding: 0 3px;
 }
