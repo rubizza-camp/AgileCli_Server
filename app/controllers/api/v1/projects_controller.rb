@@ -9,7 +9,8 @@ class Api::V1::ProjectsController < Api::V1::BaseController
 
   # POST method
   def create
-    project = Project.new(name: params[:name])
+    @user = User.find_by(github_login: params[:current_user])
+    project = @user.projects.new(name: params[:name])
     render(json: Api::V1::ProjectSerializer.new(project).serialized_json) if project.save
   end
 
