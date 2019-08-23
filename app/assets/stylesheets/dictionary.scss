@@ -44,6 +44,7 @@ body {
 
 .bg-dark-footer {
   background-color: $black;
+  border-bottom: 1px solid $black;
 }
 
 .whole-page {
@@ -66,16 +67,11 @@ body {
 }
 
 .navigation {
-  // display:inline;
-  // white-space: nowrap;
   background-color: $black;
   padding-top: 53px;
 }
 
 .background-header {
   background-color: $orange;
-  border-bottom-color: $another-color;
-  border-bottom-style: solid;
-  border-bottom-width: 0;
   box-shadow: inset 0 -2px 0 0 $unknown-color;
 }
