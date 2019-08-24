@@ -1,5 +1,3 @@
-require "bcrypt"
-
 class LoginController < ApplicationController
   def oauth
     session_code = request.env["rack.request.query_hash"]["code"]
@@ -8,10 +6,12 @@ class LoginController < ApplicationController
                                  client_secret: CLIENT_SECRET,
                                  code: session_code }, accept: :json)
     access_token = JSON.parse(response)["access_token"]
+
     client = Octokit::Client.new(access_token: access_token)
     user = client.user
     login = user.login
-    secret_node = BCrypt::Password.create(user.node_id.gsub(/[^A-Za-z0-9\s]/i, ""))
+
+    secret_node = SecureRandom.uuid
     @existing_user = User.find_by(github_login: login)
     if @existing_user
       render(json: Api::V1::UserSerializer.new(@existing_user).serialized_json)
