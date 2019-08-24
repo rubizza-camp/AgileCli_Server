@@ -6,9 +6,18 @@ class LoginController < ApplicationController
                                  client_secret: CLIENT_SECRET,
                                  code: session_code }, accept: :json)
     access_token = JSON.parse(response)["access_token"]
+
     client = Octokit::Client.new(access_token: access_token)
     user = client.user
-    @user = User.new(github_login: user.login, node: user.node_id)
-    @user.save
+    login = user.login
+
+    secret_node = SecureRandom.uuid
+    @existing_user = User.find_by(github_login: login)
+    if @existing_user
+      render(json: Api::V1::UserSerializer.new(@existing_user).serialized_json)
+    else
+      @user = User.new(github_login: login, node: secret_node)
+      @user.save
+    end
   end
 end
