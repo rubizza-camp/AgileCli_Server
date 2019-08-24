@@ -10,12 +10,13 @@ class LoginController < ApplicationController
     access_token = JSON.parse(response)["access_token"]
     client = Octokit::Client.new(access_token: access_token)
     user = client.user
-    secret_node = BCrypt::Password.create(user.node_id.gsub(/[^A-Za-z0-9\s]/i, ''))
-    @existing_user = User.find_by(github_login: user.login)
+    login = user.login
+    secret_node = BCrypt::Password.create(user.node_id.gsub(/[^A-Za-z0-9\s]/i, ""))
+    @existing_user = User.find_by(github_login: login)
     if @existing_user
       render(json: Api::V1::UserSerializer.new(@existing_user).serialized_json)
     else
-      @user = User.new(github_login: user.login, node: secret_node)
+      @user = User.new(github_login: login, node: secret_node)
       @user.save
     end
   end
