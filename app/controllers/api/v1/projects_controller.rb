@@ -3,9 +3,9 @@ class Api::V1::ProjectsController < Api::V1::BaseController
     render(json: Project.all)
   end
 
-  # def show
-    # render(json: Api::V1::ProjectSerializer.new(project).serialized_json)
-  # end
+  def show
+    render(json: Api::V1::ProjectSerializer.new(project).serialized_json)
+  end
 
   def create
     project = Project.create(name: params[:name])

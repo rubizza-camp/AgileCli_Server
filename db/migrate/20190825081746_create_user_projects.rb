@@ -1,3 +1,5 @@
+# :reek:FeatureEnvy:UncommunicativeVariableName:
+
 class CreateUserProjects < ActiveRecord::Migration[5.2]
   def change
     create_table :userprojects, id: false do |t|
