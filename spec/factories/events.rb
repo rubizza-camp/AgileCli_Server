@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :ticket do
+  factory :event do
     name { "MyString" }
     user { nil }
     project { nil }

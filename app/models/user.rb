@@ -1,6 +1,6 @@
-# rubocop:disable Rails/HasAndBelongsToMany
-
 class User < ApplicationRecord
-  has_and_belongs_to_many :projects
+  has_many :userproject
+  has_many :projects, through: :userproject
+  has_many :tickets, through: :projects
+  has_many :events, through: :projects
 end
-# rubocop:enable Rails/HasAndBelongsToMany
