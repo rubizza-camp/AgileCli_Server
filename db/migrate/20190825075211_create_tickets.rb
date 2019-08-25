@@ -1,4 +1,5 @@
-# :reek:FeatureEnvy:UncommunicativeVariableName:
+# :reek:FeatureEnvy
+# :reek:UncommunicativeVariableName
 
 class CreateTickets < ActiveRecord::Migration[5.2]
   def change

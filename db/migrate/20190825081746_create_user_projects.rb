@@ -1,4 +1,5 @@
-# :reek:FeatureEnvy:UncommunicativeVariableName:
+# :reek:FeatureEnvy
+# :reek:UncommunicativeVariableName
 
 class CreateUserProjects < ActiveRecord::Migration[5.2]
   def change
