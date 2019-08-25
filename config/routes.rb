@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get "login/oauth"
-  get "login/current"
+  get "login/signin"
   get "homepage/start"
   get "manifesto/agile"
   get "homepage/homepage"

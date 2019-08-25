@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fast start</title>
+    <%= stylesheet_link_tag 'login' %>
+  </head>
+  <body>
+    <div class="login" align='center'>
+      <h1 class="color-text"><a href="/">AgileCli</a></h1>
+      <br>
+      <h1>You have successfully logged in.</h1>
+      <p> Your login: <h1><%= @existing_user.github_login %></h1>
+      <p> Your secret code for oauth: <h1><%= @existing_user.node %></h1>
+      <h4>Enter this code in the terminal.</h4>
+      <p><a href="/">Homepage</a></p>
+    </div>
+  </body>
+</html>
