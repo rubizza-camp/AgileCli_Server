@@ -1,6 +1,9 @@
-# rubocop:disable Rails/HasAndBelongsToMany
+# rubocop:disable Rails/HasManyOrHasOneDependent
 
 class Project < ApplicationRecord
-  has_and_belongs_to_many :users
+  has_many :userproject
+  has_many :users, through: :userproject
+  has_many :tickets, through: :users
+  has_many :events, through: :users
 end
-# rubocop:enable Rails/HasAndBelongsToMany
+# rubocop:enable Rails/HasManyOrHasOneDependent

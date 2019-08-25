@@ -7,9 +7,9 @@ class Api::V1::ProjectsController < Api::V1::BaseController
     render(json: Api::V1::ProjectSerializer.new(project).serialized_json)
   end
 
-  # POST method
   def create
     project = Project.create(name: params[:name])
+    Userproject.create(user_id: user.id, project_id: project.id)
     render(json: Api::V1::ProjectSerializer.new(project).serialized_json)
   end
 
@@ -23,8 +23,13 @@ class Api::V1::ProjectsController < Api::V1::BaseController
 
   private
 
+  def user
+    @user = User.find_by(github_login: params[:current_user])
+  end
+
   def project
-    @project ||= Project.find_by(name: params[:name])
+    curr = Userproject.find_by(user_id: user.id)
+    @project ||= Project.find_by(id: curr.project_id)
   end
 
   def project_params
