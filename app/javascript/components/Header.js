@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-class HelloWorld extends React.Component {
+class Header extends React.Component {
   render () {
     return (
       <React.Fragment>
@@ -11,13 +11,13 @@ class HelloWorld extends React.Component {
           </div>
         </nav>
         </header>
-        <h1>POLINA</h1>
+        <h1></h1>
       </React.Fragment>
     );
   }
 }
 
-HelloWorld.propTypes = {
+Header.propTypes = {
   greeting: PropTypes.string
 };
-export default HelloWorld
+export default Header

@@ -13,6 +13,7 @@ $orange: #ff6d51;
 body {
   background-color: $gray;
   font-size: 25px;
+  font-family: "Futur";
 }
 
 html {
@@ -24,6 +25,10 @@ h1 {
   font-size: 70px;
   font-style: italic;
   font-weight: bolder;
+}
+
+.margin {
+  margin-left: 2%;
 }
 
 .blask {
