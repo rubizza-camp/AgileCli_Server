@@ -14,11 +14,15 @@ class Api::V1::ProjectsController < Api::V1::BaseController
   end
 
   def destroy
-    Project.find_by(name: params[:id]).destroy
+
+    proj = Project.find_by(name: params[:id])
+    upr = Userproject.where(project_id: proj.id)
+    proj.destroy
   end
 
   def update
-    project.update(project_params)
+    proj = Project.find_by(name: params[:name])
+    proj.update(project_params)
   end
 
   private
