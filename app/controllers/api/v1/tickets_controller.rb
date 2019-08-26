@@ -1,16 +1,25 @@
-class Api::V1::UsersController < Api::V1::BaseController
+class Api::V1::TicketsController < Api::V1::BaseController
   def index
     render(json: Ticket.all)
   end
 
   def show
-    @ticket = Ticket.find_by(github_login: params[:id])
-    @ticket ? render(json: Api::V1::UserSerializer.new(@ticket).serialized_json) : create
+    ticket = Ticket.find(params[:id])
+    render(json: Api::V1::TicketSerializer.new(ticket).serialized_json)
   end
 
-  # POST method
   def create
-    @ticket = User.new
-    render(json: Api::V1::UserSerializer.new(@ticket).serialized_json) if @ticket.save
+    new_ticket = project.tickets.create(name: params[:name], user_id: user.id, description: params[:desc])
+    render(json: Api::V1::TicketSerializer.new(new_ticket).serialized_json)
+  end
+
+  private
+
+  def project
+    @project ||= Project.find(params[:project_id])
+  end
+
+  def user
+    @user ||= User.find_by(github_login: params[:user])
   end
 end
