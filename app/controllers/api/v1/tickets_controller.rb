@@ -4,16 +4,14 @@ class Api::V1::TicketsController < Api::V1::BaseController
   end
 
   def show
+    ticket = Ticket.find(params[:id])
     render(json: Api::V1::TicketSerializer.new(ticket).serialized_json)
   end
 
   def create
-    require 'pry'; binding.pry
     new_ticket = project.tickets.create(name: params[:name], user_id: user.id, description: params[:desc])
     render(json: Api::V1::TicketSerializer.new(new_ticket).serialized_json)
   end
-
-  def
 
   private
 
