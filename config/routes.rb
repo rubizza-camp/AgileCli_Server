@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       resources :users, only: %i[index create show update destroy]
       resources :projects, only: %i[index create show update destroy]
       resources :userproject, only: %i[index create show update destroy]
+      resources :tickets, only: %i[index create show update destroy]
       resources :microposts, only: %i[index create show update destroy]
     end
   end
