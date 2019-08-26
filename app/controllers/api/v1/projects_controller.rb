@@ -13,13 +13,6 @@ class Api::V1::ProjectsController < Api::V1::BaseController
     render(json: Api::V1::ProjectSerializer.new(project).serialized_json)
   end
 
-  def destroy
-
-    proj = Project.find_by(name: params[:id])
-    upr = Userproject.where(project_id: proj.id)
-    proj.destroy
-  end
-
   def update
     proj = Project.find_by(name: params[:name])
     proj.update(project_params)
