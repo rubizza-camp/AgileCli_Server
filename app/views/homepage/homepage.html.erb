@@ -1,9 +1,15 @@
 <%= stylesheet_link_tag 'homepage' %>
+<% content_for :title, "Title for specific page" %>
+<!-- or -->
+<!-- <h1><%= content_for(:title, "Title for specific page") %></h1> -->
+<% @title="Home" %>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <title><%= yield(:title) %></title>
+    <link href="/icon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <!-- <title><%= @title %><</title> -->
     <meta charset="utf-8">
-    <title>AgileCli</title>
     <meta name="author" content="Andrew Berendeev">
   </head>
 
@@ -90,7 +96,7 @@
         </div>
 
         <div class="col-lg-4">
-          <h2>Rubizza</h2>
+          <h2><img src="icon.ico" width="25" height="25" alt="">Rubizza</h2>
           <p><a class="btn btn-secondary" href="https://rubizza.com/" role="button">View details &raquo;</a></p>
         </div>
 
