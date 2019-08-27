@@ -3,6 +3,6 @@ class WelcomeMailer < ApplicationMailer
 
   def sample_email(user)
     @user = user
-    mail(to: @user.email, subject: 'Registration')
+    mail(to: @user.email, subject: "Registration")
   end
 end
