@@ -3,6 +3,6 @@ class InviteMailer < ApplicationMailer
 
   def sample_email(user)
     @user = user
-    mail(to: @user.email, subject: 'Registration')
+    mail(to: @user.email, subject: 'Invitation to project')
   end
 end
