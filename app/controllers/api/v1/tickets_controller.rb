@@ -4,7 +4,7 @@ class Api::V1::TicketsController < Api::V1::BaseController
   end
 
   def show
-    ticket = Ticket.find(params[:id])
+    ticket = Ticket.find_by(name: params[:id])
     render(json: Api::V1::TicketSerializer.new(ticket).serialized_json)
   end
 
