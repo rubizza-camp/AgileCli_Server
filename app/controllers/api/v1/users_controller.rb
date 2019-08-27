@@ -11,6 +11,7 @@ class Api::V1::UsersController < Api::V1::BaseController
   # POST method
   def create
     @user = User.new(github_login: params[:id])
+    WelcomeMailer.sample_email(@user).deliver
     render(json: Api::V1::UserSerializer.new(@user).serialized_json) if @user.save
   end
 end
