@@ -13,6 +13,15 @@ class Api::V1::TicketsController < Api::V1::BaseController
     render(json: Api::V1::TicketSerializer.new(new_ticket).serialized_json)
   end
 
+  def update
+    ticket = Ticket.find_by(name: params[:name])
+    if params[:type] == "1"
+      ticket.update(ticket_name)
+    else
+      ticket.update(ticket_desc)
+    end
+  end
+
   private
 
   def project
@@ -21,5 +30,13 @@ class Api::V1::TicketsController < Api::V1::BaseController
 
   def user
     @user ||= User.find_by(github_login: params[:user])
+  end
+
+  def ticket_name
+    { name: params[:new_name] }
+  end
+
+  def ticket_desc
+    { description: params[:new_description] }
   end
 end
