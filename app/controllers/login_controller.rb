@@ -16,8 +16,8 @@ class LoginController < ApplicationController
     if @existing_user
       render "login/signin"
     else
-      @user = User.new(github_login: login, node: secret_node)
-      @user.save
+      @user = User.new(github_login: login, node: secret_node, email: user.email)
+      WelcomeMailer.sample_email(@user).deliver if @user.save
     end
   end
 end
