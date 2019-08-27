@@ -2,11 +2,33 @@
 <html>
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <style>
+      body {
+        background-color: #f1684e;
+        color: #1b1b1b;
+      }
+    </style>
   </head>
   <body>
     <h1>Hi <%= @user.github_login %></h1>
     <p>
-      Welcome to Agile-CLI community.
+      You have been successfully registered in Agile-CLI system.
+      We glad to see you in our community.
+      Click <a href="https://agile-cli.herokuapp.com">Here</a>to get more information about us.
     </p>
+    <div class="col-lg-4">
+      <h2><img src="mark-github.svg" width="35" height="35" alt="github"> GitHub</h2>
+      <p><a class="btn btn-secondary" href="https://github.com/rubizza-camp/AgileCli" role="button">View Client &raquo;</a></p>
+    </div>
+
+    <div class="col-lg-4">
+      <h2><img src="ruby.svg" width="35" height="35" alt="">Rubygems</h2>
+      <p><a class="btn btn-secondary" href="https://rubygems.org/gems/agile-cli" role="button">View details &raquo;</a></p>
+    </div>
+
+    <div class="col-lg-4">
+      <h2>Rubizza</h2>
+      <p><a class="btn btn-secondary" href="https://rubizza.com/" role="button">View details &raquo;</a></p>
+    </div>
   </body>
 </html>
