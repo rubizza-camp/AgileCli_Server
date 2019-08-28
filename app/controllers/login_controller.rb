@@ -14,11 +14,11 @@ class LoginController < ApplicationController
     secret_node = SecureRandom.uuid
     @existing_user = User.find_by(github_login: login)
     if @existing_user
-      session[:current_user_id] = @existing_user.id
-      binding.pry
+      session[:user_id] = @existing_user.id
       render "login/signin"
     else
       @user = User.new(github_login: login, node: secret_node)
+      session[:user_id] = @user.id
       @user.save
     end
   end

@@ -1,0 +1,57 @@
+// Place all the styles related to the personal_area controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$black: #1b1b1b;
+$gray: #e4e4e4;
+$orange: #ff6d51;
+
+body {
+  background-color: $gray;
+  font-family: "Futur";
+}
+
+.blask {
+  color: $black;
+}
+
+.blask:hover {
+  color: $black;
+}
+
+.blask-git {
+  color: $gray;
+}
+
+.blask-git:hover {
+  color: $gray;
+}
+
+.btn-git {
+  background-color: $black;
+  border-color: $orange;
+  color: $gray;
+}
+
+a {
+  background-color: transparent;
+  color: $gray;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: $orange;
+  border-color: $orange;
+  color: $gray;
+}
+
+.background-header {
+  background-color: $orange;
+}
+
+.bg-dark-footer {
+  background-color: $black;
+}
+
+.background-color-image {
+  background-color: $orange;
+}

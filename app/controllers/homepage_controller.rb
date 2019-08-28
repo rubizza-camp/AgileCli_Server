@@ -1,8 +1,5 @@
 class HomepageController < ApplicationController
   def homepage; end
 
-  def start
-    User.all
-  end
-
+  def start; end
 end

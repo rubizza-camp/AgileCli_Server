@@ -1,11 +1,10 @@
 class ApplicationController < ActionController::Base
-  private
-  # def current_user
-  #   return unless session[:user_id]
-  #   @current_user ||= User.find(session[:user_id])
-  # end
+  helper_method :current_user
   def current_user
-    @_current_user ||= session[:current_user_id] &&
-      User.find_by(id: session[:current_user_id])
+    if session[:user_id]
+      @current_user ||= User.find(session[:user_id])
+    else
+      @current_user = nil
+    end
   end
 end

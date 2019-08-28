@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  get 'personal_area/cabinet'
+  resources :users
+    resources :sessions, only: [:new, :create, :destroy]
+    get 'signup', to: 'users#new', as: 'signup'
+    get 'login', to: 'sessions#new', as: 'login'
+    get 'logout', to: 'sessions#destroy', as: 'logout'
+  get 'sessions/new'
+  get 'sessions/create'
+  get 'sessions/destroy'
   get "login/oauth"
   get "login/signin"
   get "homepage/start"
