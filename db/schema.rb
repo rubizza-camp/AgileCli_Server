@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_27_105252) do
+ActiveRecord::Schema.define(version: 2019_08_28_061755) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,10 +20,10 @@ ActiveRecord::Schema.define(version: 2019_08_27_105252) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "description"
-    t.integer "type"
     t.date "date"
     t.integer "frequency"
     t.time "time"
+    t.integer "event_type"
     t.index ["project_id"], name: "index_events_on_project_id"
   end
 
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2019_08_27_105252) do
   create_table "users", force: :cascade do |t|
     t.string "github_login", null: false
     t.string "node"
+    t.string "email"
     t.index ["github_login"], name: "index_users_on_github_login", unique: true
   end
 
