@@ -7,12 +7,14 @@ class Api::V1::EventsController < Api::V1::BaseController
   #
   # end
 
+  # rubocop: disable AbcSize
   def create
     new_event = project.events.create(description: params[:desc],
                                       date: params[:date], event_type: params[:event_type].to_i,
                                       frequency: params[:freq].to_i, time: params[:time])
     render(json: Api::V1::EventSerializer.new(new_event).serialized_json)
   end
+  # rubocop: enable AbcSize
 
   private
 
