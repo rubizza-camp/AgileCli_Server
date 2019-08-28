@@ -17,9 +17,9 @@ class LoginController < ApplicationController
       session[:user_id] = @existing_user.id
       render "login/signin"
     else
-      @user = User.new(github_login: login, node: secret_node)
+      @user = User.new(github_login: login, node: secret_node, email: user.email)
+      WelcomeMailer.sample_email(@user).deliver if @user.save
       session[:user_id] = @user.id
-      @user.save
     end
   end
 end

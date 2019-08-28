@@ -51,6 +51,6 @@
       database: server_test
       host: localhost
       pool: 5
-      username: agile
+      username: root
       password: 11111
       timeout: 5000

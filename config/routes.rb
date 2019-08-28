@@ -26,6 +26,8 @@ Rails.application.routes.draw do
       resources :userproject, only: %i[index create show update destroy]
       resources :tickets, only: %i[index create show update destroy]
       resources :microposts, only: %i[index create show update destroy]
+      resources :events, only: %i[index create show update destroy]
+
     end
   end
 end

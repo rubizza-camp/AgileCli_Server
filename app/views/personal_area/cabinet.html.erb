@@ -20,40 +20,11 @@
 <div class="background-color-image" align='center'>
   <img src="a.png" alt="" width="100%" >
 </div>
-      <div>
+      <div align='center'>
         <% @projects.each do |proj| %>
-        <p><%= proj.name %>-<%= proj.description  %></p><br>
+        <p><%= proj.name %>- ТЫ ПИДОР -<%= proj.description  %></p><br>
         <% end %>
-        <button type="button" name="button"><%= link_to "log out", logout_path %></button>
-      </div>
-    <br>
-      <hr class="featurette-divider">
-      <br>
-      <div class="" align='center'>
-        <a class="btn btn-secondary" href="/manifesto/agile" role="button">Manifesto</a>
-        <a class="btn btn-secondary" href="/dictionary/dictionary" role="button">Dictionary</a>
-        <a name='start' class="btn btn-secondary" href="/homepage/start" role="button">How To Start</a>
-      </div>
-      <br>
-      <hr class="featurette-divider">
-
-      <div class="row">
-
-        <div class="col-lg-4">
-          <h2><img src="mark-github.svg" width="35" height="35" alt="github"> GitHub</h2>
-          <p><a class="btn btn-secondary" href="https://github.com/rubizza-camp/AgileCli" role="button">View Client &raquo;</a></p>
-        </div>
-
-        <div class="col-lg-4">
-          <h2><img src="ruby.svg" width="35" height="35" alt="">Rubygems</h2>
-          <p><a class="btn btn-secondary" href="https://rubygems.org/gems/agile-cli" role="button">View details &raquo;</a></p>
-        </div>
-
-        <div class="col-lg-4">
-          <h2>Rubizza</h2>
-          <p><a class="btn btn-secondary" href="https://rubizza.com/" role="button">View details &raquo;</a></p>
-        </div>
-
+        <button class='btn btn-secondary' type="button" name="button"><%= link_to "log out", logout_path %></button>
       </div>
     <nav class="navbar navbar-expand-md navbar-dark fixed-bot bg-dark-footer">
     <footer class="container">
