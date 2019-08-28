@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_28_061755) do
+ActiveRecord::Schema.define(version: 2019_08_28_080905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,8 +22,9 @@ ActiveRecord::Schema.define(version: 2019_08_28_061755) do
     t.string "description"
     t.date "date"
     t.integer "frequency"
-    t.time "time"
     t.integer "event_type"
+    t.time "start_time"
+    t.time "end_time"
     t.index ["project_id"], name: "index_events_on_project_id"
   end
 
