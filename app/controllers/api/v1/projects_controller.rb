@@ -11,6 +11,7 @@ class Api::V1::ProjectsController < Api::V1::BaseController
   def create
     project = Project.create(name: params[:name])
     Userproject.create(user_id: user.id, project_id: project.id)
+    user.add_role :scrum_master, project
     render(json: Api::V1::ProjectSerializer.new(project).serialized_json)
   end
 
