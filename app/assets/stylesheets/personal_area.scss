@@ -1,4 +1,4 @@
-// Place all the styles related to the Homepage controller here.
+// Place all the styles related to the personal_area controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $black: #1b1b1b;
@@ -8,48 +8,6 @@ $orange: #ff6d51;
 body {
   background-color: $gray;
   font-family: "Futur";
-}
-
-.div-flex {
-  background-color: $black;
-  border: 1px;
-  border-radius: 5px;
-  color: $gray;
-  display: flex;
-  flex-direction: column;
-  height: 30px;
-  margin-bottom: 1%;
-  padding-top: 2px;
-  width: 29%;
-}
-
-.projects-list:hover {
-  background-color: $orange;
-  border-radius: 5px;
-  color: $black;
-  display: flex;
-  flex-direction: column;
-  height: 94%;
-  text-decoration: none;
-  width: 99%;
-}
-
-.footer-bot {
-  background: $black;
-  bottom: 0;
-  color: $gray;
-  left: 0;
-  padding: 10px;
-  position: fixed;
-  width: 100%;
-}
-
-.marg-left {
-  margin-left: 10%;
-}
-
-.marg-right {
-  margin-right: 10%;
 }
 
 .blask {
