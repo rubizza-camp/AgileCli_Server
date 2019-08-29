@@ -5,4 +5,3 @@ class Project < ApplicationRecord
   has_many :tickets
   has_many :events
 end
-# rubocop:enable Rails/HasManyOrHasOneDependent
