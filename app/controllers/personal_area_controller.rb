@@ -1,5 +1,6 @@
 class PersonalAreaController < ApplicationController
   def cabinet
-    @projects = Project.all
+    @current_user = User.find(session[:user_id])
+    @projects = @current_user.projects
   end
 end

@@ -10,6 +10,30 @@ body {
   font-family: "Futur";
 }
 
+.projects-list {
+  color: $black;
+  border: 1px; solid: $black;
+  border-radius: 5px;
+  padding: 0.375rem 0.75rem;
+}
+
+.footer-bot {
+    position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding: 10px; /* Поля вокруг текста */
+    background: $black; /* Цвет фона */
+    color: $gray; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+   }
+
+.marg-left {
+  margin-left: 10%;
+}
+
+.marg-right {
+  margin-right: 10%;
+}
+
 .blask {
   color: $black;
 }
