@@ -12,38 +12,36 @@ body {
 
 .div-flex {
   background-color: $black;
-  border: 1px; solid: $black;
+  border: 1px;
   border-radius: 5px;
   color: $gray;
   display: flex;
-  height: 30px;
-  padding-top: 2px;
-  margin-bottom: 1%;
   flex-direction: column;
+  height: 30px;
+  margin-bottom: 1%;
+  padding-top: 2px;
   width: 29%;
 }
 
 .projects-list:hover {
   background-color: $orange;
-  border-color: $black;
-  border: 10px;
-  border: 1px; solid: $black;
   border-radius: 5px;
   color: $black;
   display: flex;
-  height: 94%;
   flex-direction: column;
+  height: 94%;
   text-decoration: none;
-  width: 98%;
+  width: 99%;
 }
 
 .footer-bot {
-  background: $black; /* Цвет фона */
-  color: $gray; /* Цвет текста */
-  left: 0; bottom: 0; /* Левый нижний угол */
-  padding: 10px; /* Поля вокруг текста */
-  position: fixed; /* Фиксированное положение */
-  width: 100%; /* Ширина слоя */
+  background: $black;
+  bottom: 0;
+  color: $gray;
+  left: 0;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
 }
 
 .marg-left {
