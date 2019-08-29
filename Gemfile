@@ -50,6 +50,7 @@ gem "bootsnap", ">= 1.1.0", require: false
 # API
 gem "bcrypt"
 gem "fast_jsonapi"
+gem "rolify"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

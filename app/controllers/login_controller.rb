@@ -10,14 +10,16 @@ class LoginController < ApplicationController
     client = Octokit::Client.new(access_token: access_token)
     user = client.user
     login = user.login
+    mail = user.email
 
     secret_node = SecureRandom.uuid
     @existing_user = User.find_by(github_login: login)
     if @existing_user
       render "login/signin"
     else
-      @user = User.new(github_login: login, node: secret_node, email: user.email)
-      WelcomeMailer.sample_email(@user).deliver if @user.save
+      @user = User.new(github_login: login, node: secret_node, email: mail)
+      WelcomeMailer.sample_email(@user).deliver if mail
+      @user.save
     end
   end
 end
