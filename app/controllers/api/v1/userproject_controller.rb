@@ -17,7 +17,7 @@ class Api::V1::UserprojectController < Api::V1::BaseController
   private
 
   def user
-    @new_user = User.find_by(github_login: params[:new_user])
+    User.find_by(github_login: params[:new_user])
   end
 
   def project
@@ -26,9 +26,7 @@ class Api::V1::UserprojectController < Api::V1::BaseController
   end
 
   def initialize_user_and_projects
-    @user = User.find_by(github_login: params[:id])
-    current = Userproject.where(user_id: @user.id)
-    @projects = []
-    current.each { |curr| @projects.push(Project.where(id: curr.project_id)) }
+    user = User.find_by(github_login: params[:id])
+    @projects = user.projects.all
   end
 end
