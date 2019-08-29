@@ -11,13 +11,13 @@ body {
 }
 
 .div-flex {
-  font-size: 30px;
   background-color: $black;
   border: 1px;
   border-radius: 5px;
   color: $gray;
   display: flex;
   flex-direction: column;
+  font-size: 30px;
   height: 50px;
   margin-bottom: 1%;
   width: 29%;
