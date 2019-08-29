@@ -25,15 +25,17 @@
     <hr class="featurette-divider">
 <div class="background-color-image" align='center'>
 </div>
+      <br>
       <div align='center'>
         <% @projects.each do |proj| %>
-          <a class='projects-list' href="/"><%= proj.name %></a>
+          <div class='div-flex'>
+            <a class='projects-list' href="/projects/#{<%= proj.id %>}"><%= proj.name.capitalize %></a>
+          </div>
         <% end %>
       </div>
 
     <footer class="footer-bot">
       <p class="navbar-brand marg-left">AgileCli &copy; 2019 Rubizza &middot; <a href="https://github.com/rubizza-camp/AgileCli/blob/master/LICENSE" style='text-decoration:none; color: white;'>Terms</a></p>
-      <p class="float-right marg-right"><a class="btn btn-secondary" href="#" role="button" >Back to top</a></p>
     </footer>
 
   </main>

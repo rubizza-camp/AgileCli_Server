@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get "homepage/homepage"
   get "dictionary/dictionary"
   root "homepage#homepage"
+  resources :projects
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # get '/welcome/index', to "welcome#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
