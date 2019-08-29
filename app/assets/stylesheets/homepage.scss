@@ -11,16 +11,17 @@ body {
 }
 
 .div-flex {
+  font-size: 30px;
   background-color: $black;
   border: 1px;
   border-radius: 5px;
   color: $gray;
   display: flex;
   flex-direction: column;
-  height: 30px;
+  height: 50px;
   margin-bottom: 1%;
-  padding-top: 2px;
   width: 29%;
+
 }
 
 .projects-list:hover {
@@ -29,9 +30,9 @@ body {
   color: $black;
   display: flex;
   flex-direction: column;
-  height: 94%;
+  height: 100%;
   text-decoration: none;
-  width: 99%;
+  width: 100%;
 }
 
 .footer-bot {
