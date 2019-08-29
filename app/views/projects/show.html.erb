@@ -1,0 +1,68 @@
+<%= stylesheet_link_tag 'project' %>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>AgileCli</title>
+    <meta name="author" content="Ilya Vasilevich">
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top background-header">
+        <a class="navbar-brand" href="/">AgileCli</a>
+        <a style="color: black;" class="navbar-brand" href="/personal_area/cabinet">Back</a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+          </ul>
+          <form class="form-inline mt-2 mt-md-0">
+            <button class="btn btn-git"><a class="blask-git" href="/"><%= link_to "log out", logout_path %></a></button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <main role="main">
+      <hr class="featurette-divider">
+      <hr class="featurette-divider">
+      <br>
+      <div class="project-flex">
+        <div class="single-project" align='center'>
+          <% if @tickets.empty? %>
+            <h1>Project has no tickets</h1>
+          <% else %>
+            <h1><%= @project.name.capitalize %>'s tickets</h1>
+            <% @tickets.each do |ticket| %>
+              <div>
+                <%= ticket.name.capitalize %>
+              </div>
+              <div class="div-flex">
+                <%= ticket.description %>
+              </div>
+              <hr class="featurette-divider">
+            <% end %>
+          <% end %>
+        </div>
+
+        <div class="single-project" align='center'>
+          <% if @events.empty? %>
+            <h1>Project has no events</h1>
+          <% else %>
+            <h1><%= @project.name.capitalize %>'s events</h1>
+            <% @events.each do |event| %>
+              <div class="div-flex">
+                <%= event.event_type.capitalize %><br>
+                <%= event.date.to_date.strftime("%B %d") %><br>
+                Event starts at <%= event.start_time.to_time.strftime("%I:%M") %><br>
+                Event ends at <%= event.end_time.to_time.strftime("%I:%M") %><br>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <footer class="footer-bot">
+        <p class="navbar-brand marg-left">AgileCli &copy; 2019 Rubizza &middot; <a href="https://github.com/rubizza-camp/AgileCli/blob/master/LICENSE" style='text-decoration:none; color: white;'>Terms</a></p>
+      </footer>
+
+    </main>
+  </body>
+</html>

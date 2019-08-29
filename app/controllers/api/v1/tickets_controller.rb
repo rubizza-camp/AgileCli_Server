@@ -9,7 +9,8 @@ class Api::V1::TicketsController < Api::V1::BaseController
   end
 
   def create
-    new_ticket = project.tickets.create(name: params[:name], user_id: user.id, description: params[:desc])
+    new_ticket = project.tickets.create(name: params[:name], user_id: user.id,
+                                        description: params[:desc], status: params[:status].to_i)
     render(json: Api::V1::TicketSerializer.new(new_ticket).serialized_json)
   end
 

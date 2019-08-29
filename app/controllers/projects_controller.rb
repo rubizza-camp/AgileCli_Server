@@ -1,3 +1,7 @@
 class ProjectsController < ApplicationController
-  def show; end
+  def show
+    @project = Project.find(params[:id])
+    @tickets = @project.tickets
+    @events = @project.events
+  end
 end

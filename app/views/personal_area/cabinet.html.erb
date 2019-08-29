@@ -30,7 +30,7 @@
         <h3>Your projects</h3>
         <% @projects.each do |proj| %>
           <div class='div-flex'>
-            <a class='projects-list' href="/projects/#{<%= proj.id %>}"><%= proj.name.capitalize %></a>
+            <a class='projects-list' href="/projects/<%= proj.id %>"><%= proj.name.capitalize %></a>
           </div>
         <% end %>
       </div>
