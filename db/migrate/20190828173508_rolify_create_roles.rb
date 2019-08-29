@@ -1,3 +1,7 @@
+# :reek:FeatureEnvy
+# :reek:UncommunicativeVariableName
+# :reek:TooManyStatements
+
 class RolifyCreateRoles < ActiveRecord::Migration[5.2]
   def change
     create_table(:roles) do |t|
