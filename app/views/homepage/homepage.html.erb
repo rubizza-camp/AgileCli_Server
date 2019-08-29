@@ -18,7 +18,7 @@
           </li>
         </ul>
         <% if current_user %>
-          <button class="btn btn-git"><a class="blask-git" href="/personal_area/cabinet">My profile</a></button>
+          <button class="btn btn-git"><a class="blask-git" href="/personal_area/cabinet">Your profile</a></button>
         <% else %>
         <form class="form-inline mt-2 mt-md-0">
           <button class="btn btn-git"><a class="blask-git" href="https://github.com/login/oauth/authorize?client_id=<%= CLIENT_ID %>">Sign In with GitHub</a></button>

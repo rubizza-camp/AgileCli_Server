@@ -11,33 +11,37 @@ body {
 }
 
 .div-flex {
-  margin-bottom: 1%;
-  width: 29%;
-  display: flex;
-  flex-direction: column;
   background-color: $black;
-  border: 1px; solid: $black;
+  border: 1px;
   border-radius: 5px;
   color: $gray;
-}
-
-.projects-list {
-  // padding: 0.375rem 0.15rem;
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  margin-bottom: 1%;
+  padding-top: 2px;
+  width: 29%;
 }
 
 .projects-list:hover {
   background-color: $orange;
+  border-radius: 5px;
   color: $black;
+  display: flex;
+  flex-direction: column;
+  height: 94%;
   text-decoration: none;
+  width: 99%;
 }
 
 .footer-bot {
-  background: $black; /* Цвет фона */
-  color: $gray; /* Цвет текста */
-  left: 0; bottom: 0; /* Левый нижний угол */
-  padding: 10px; /* Поля вокруг текста */
-  position: fixed; /* Фиксированное положение */
-  width: 100%; /* Ширина слоя */
+  background: $black;
+  bottom: 0;
+  color: $gray;
+  left: 0;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
 }
 
 .marg-left {
