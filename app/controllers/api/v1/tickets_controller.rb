@@ -18,12 +18,18 @@ class Api::V1::TicketsController < Api::V1::BaseController
     ticket = Ticket.find_by(name: params[:name])
     if params[:type] == "1"
       ticket.update(ticket_name)
+    elsif params[:type] == "2"
+      ticket.update(ticket_owner)
     else
       ticket.update(ticket_desc)
     end
   end
 
   private
+
+  def ticket_owner
+    { owner: params[:user] }
+  end
 
   def project
     @project ||= Project.find(params[:project_id])
