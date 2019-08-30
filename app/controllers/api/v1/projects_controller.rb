@@ -17,10 +17,11 @@ class Api::V1::ProjectsController < Api::V1::BaseController
 
   def update
     proj = Project.find_by(name: params[:name])
+    return unless user.has_role?(:scrum_master, project)
     if params[:type] == "1"
-      proj.update(project_name) if user.has_role?(:scrum_master, project)
+      proj.update(project_name)
     else
-      proj.update(project_desc) if user.has_role?(:scrum_master, project)
+      proj.update(project_desc)
     end
   end
 
