@@ -10,7 +10,8 @@ class Api::V1::TicketsController < Api::V1::BaseController
 
   def create
     if user.has_role?(:scrum_master, project) || user.has_role?(:product_owner, project)
-      new_ticket = project.tickets.create(name: params[:name], user_id: user.id, description: params[:desc])
+      new_ticket = project.tickets.create(name: params[:name], user_id: user.id,
+                                          description: params[:desc], status: params[:status].to_i)
       render(json: Api::V1::TicketSerializer.new(new_ticket).serialized_json)
     end
   end
@@ -20,6 +21,10 @@ class Api::V1::TicketsController < Api::V1::BaseController
       ticket = Ticket.find_by(name: params[:name])
       if params[:type] == "1"
         ticket.update(ticket_name)
+      elsif params[:type] == "2"
+        ticket.update(ticket_owner)
+      elsif params[:type] == "3"
+        ticket.update(ticket_status)
       else
         ticket.update(ticket_desc)
       end
@@ -27,6 +32,14 @@ class Api::V1::TicketsController < Api::V1::BaseController
   end
 
   private
+
+  def ticket_status
+    { status: params[:status].to_i }
+  end
+
+  def ticket_owner
+    { owner: params[:user] }
+  end
 
   def project
     @project ||= Project.find(params[:project_id])

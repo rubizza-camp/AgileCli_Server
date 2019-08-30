@@ -1,5 +1,3 @@
-# rubocop:disable Rails/HasManyOrHasOneDependent
-
 class Project < ApplicationRecord
   resourcify
   has_many :userproject
@@ -7,4 +5,3 @@ class Project < ApplicationRecord
   has_many :tickets
   has_many :events
 end
-# rubocop:enable Rails/HasManyOrHasOneDependent
