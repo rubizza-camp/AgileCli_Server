@@ -15,9 +15,10 @@ class Api::V1::UsersController < Api::V1::BaseController
 
   def update
     check_role
-    if params[:role_id] == 1
+    role_id = params[:role_id]
+    if role_id == 1
       user.add_role(:team_member, project)
-    elsif params[:role_id] == 2
+    elsif role_id == 2
       user.add_role(:scrum_master, project)
     else
       user.add_role(:product_owner, project)

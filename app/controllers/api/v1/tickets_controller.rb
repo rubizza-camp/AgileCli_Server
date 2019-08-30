@@ -17,13 +17,14 @@ class Api::V1::TicketsController < Api::V1::BaseController
   end
 
   def update
+    type = params[:type]
     if user.has_role?(:scrum_master, project) || user.has_role?(:product_owner, project)
       ticket = Ticket.find_by(name: params[:name])
-      if params[:type] == "1"
+      if type == "1"
         ticket.update(ticket_name)
-      elsif params[:type] == "2"
+      elsif type == "2"
         ticket.update(ticket_owner)
-      elsif params[:type] == "3"
+      elsif type == "3"
         ticket.update(ticket_status)
       else
         ticket.update(ticket_desc)
