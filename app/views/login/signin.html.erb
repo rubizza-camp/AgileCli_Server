@@ -9,11 +9,11 @@
     <div class="login" align='center'>
       <h1 class="color-text"><a href="/">AgileCli</a></h1>
       <br>
-      <h1>You have successfully logged in.</h1>
-      <p> Your login: <h1><%= @existing_user.github_login %></h1>
+      <h1>Welcome back, <%= @existing_user.github_login %></h1>
       <p> Your secret code for oauth: <h1><%= @existing_user.node %></h1>
       <h4>Enter this code in the terminal.</h4>
-      <p><a href="/">Homepage</a></p>
+      <h3><a href="/">Homepage</a></h3>
+      <h3><a href="/personal_area/cabinet">Your profile</a></h3>
     </div>
   </body>
 </html>
