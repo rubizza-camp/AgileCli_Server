@@ -14,7 +14,6 @@ class Api::V1::TicketsController < Api::V1::BaseController
     render(json: Api::V1::TicketSerializer.new(new_ticket).serialized_json)
   end
 
-
   def update
     ticket = Ticket.find_by(name: params[:name])
     if params[:type] == "1"
