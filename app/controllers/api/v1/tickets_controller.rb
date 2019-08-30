@@ -20,12 +20,18 @@ class Api::V1::TicketsController < Api::V1::BaseController
       ticket.update(ticket_name)
     elsif params[:type] == "2"
       ticket.update(ticket_owner)
+    elsif params[:type] == "3"
+      ticket.update(ticket_status)
     else
       ticket.update(ticket_desc)
     end
   end
 
   private
+
+  def ticket_status
+    { status: params[:status].to_i }
+  end
 
   def ticket_owner
     { owner: params[:user] }
