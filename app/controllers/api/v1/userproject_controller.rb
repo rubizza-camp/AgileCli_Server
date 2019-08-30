@@ -11,6 +11,7 @@ class Api::V1::UserprojectController < Api::V1::BaseController
   def update
     proj = Project.find_by(name: params[:project])
     Userproject.create(user_id: user.id, project_id: proj.id)
+    user.add_role(:team_member, proj)
     render(json: Api::V1::ProjectSerializer.new(project).serialized_json)
   end
 

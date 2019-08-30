@@ -10,10 +10,12 @@ class Api::V1::EventsController < Api::V1::BaseController
 
   # rubocop: disable AbcSize
   def create
-    new_event = project.events.create(description: params[:desc], date: params[:date],
-                                      event_type: params[:event_type].to_i,
-                                      start_time: params[:start_time], end_time: params[:end_time])
-    render(json: Api::V1::EventSerializer.new(new_event).serialized_json)
+    if user.has_role?(:scrum_master, project)
+      new_event = project.events.create(description: params[:desc], date: params[:date],
+                                        event_type: params[:event_type].to_i,
+                                        start_time: params[:start_time], end_time: params[:end_time])
+      render(json: Api::V1::EventSerializer.new(new_event).serialized_json)
+    end
   end
   # rubocop: enable AbcSize
 
