@@ -10,6 +10,7 @@ class Api::V1::EventsController < Api::V1::BaseController
 
   # rubocop: disable AbcSize
   def create
+    return unless user.has_role?(:scrum_master, project)
     new_event = project.events.create(description: params[:desc], date: params[:date],
                                       event_type: params[:event_type].to_i,
                                       start_time: params[:start_time], end_time: params[:end_time])
