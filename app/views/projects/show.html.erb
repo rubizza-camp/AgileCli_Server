@@ -34,65 +34,40 @@
           <% else %>
             <div class="statused-tickets" align="center">
               <h1>To Do</h1>
-              <a href="#openModal">Открыть модальное окно</a>
               <% @tickets.select{ |t| t.status == "todo" }.each do |ticket| %>
-                <div class="div-flex">
-                  <%= ticket.name.capitalize %>
-
-                </div>
-                <hr class="featurette-divider">
+              <%= react_component("Ticket", ticket: ticket ) %>
+              <hr class="featurette-divider">
               <% end %>
             </div>
 
             <div class="statused-tickets" align="cent">
               <h1>In progress</h1>
               <% @tickets.select{|t| t.status == "in_progress"}.each do |ticket| %>
-                <div class="div-flex holder">
-                  <%= ticket.name.capitalize %>
-                  <div class="block block-size">
-                    <%= ticket.description %>
-                  </div>
-                </div>
-                <hr class="featurette-divider">
+              <%= react_component("Ticket", ticket: ticket ) %>
+              <hr class="featurette-divider">
               <% end %>
             </div>
 
             <div class="statused-tickets" align="center">
               <h1>Review</h1>
               <% @tickets.select{|t| t.status == "review"}.each do |ticket| %>
-                <div class="div-flex holder">
-                  <%= ticket.name.capitalize %>
-                  <div class="block block-size">
-                    <%= ticket.description %>
-                  </div>
-                </div>
-                <hr class="featurette-divider">
+              <%= react_component("Ticket", ticket: ticket ) %>
+              <hr class="featurette-divider">
               <% end %>
             </div>
 
             <div class="statused-tickets" align="center">
               <h1>Done</h1>
               <% @tickets.select{|t| t.status == "done"}.each do |ticket| %>
-                <div class="div-flex holder">
-                  <%= ticket.name.capitalize %>
-                  <div class="block block-size">
-                    <%= ticket.description %>
-                  </div>
-                </div>
-                <hr class="featurette-divider">
+              <%= react_component("Ticket", ticket: ticket ) %>
+              <hr class="featurette-divider">
               <% end %>
             </div>
 
             <div class="statused-tickets" align="center">
               <h1>Merged</h1>
               <% @tickets.select{|t| t.status == "merged"}.each do |ticket| %>
-                <div class="div-flex holder">
-                  <%= ticket.name.capitalize %>
-                  <div class="block block-size">
-                    <%= ticket.description %>
-                  </div>
-                </div>
-                <hr class="featurette-divider">
+              <hr class="featurette-divider">
               <% end %>
             </div>
 
@@ -116,7 +91,6 @@
         </div>
       </div>
 
-      <div id="root"></div>
       <footer class="footer-bot">
         <p class="navbar-brand marg-left">AgileCli &copy; 2019 Rubizza &middot; <a href="https://github.com/rubizza-camp/AgileCli/blob/master/LICENSE" style="text-decoration:none; color: white;">Terms</a></p>
       </footer>
