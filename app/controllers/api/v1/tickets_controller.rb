@@ -33,7 +33,7 @@ class Api::V1::TicketsController < Api::V1::BaseController
   private
 
   def check_role
-    user.has_role?(:scrum_master, project) || user.has_role?(:product_owner, project)
+    user.has_role?(:scrum_master, project)
   end
 
   def update_type_desc(ticket)
