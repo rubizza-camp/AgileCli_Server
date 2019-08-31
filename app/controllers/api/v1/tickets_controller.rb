@@ -33,19 +33,15 @@ class Api::V1::TicketsController < Api::V1::BaseController
   private
 
   def check_role
-    user.has_role?(:scrum_master, project)
+    user.has_role?(:scrum_master, project) || user.has_role?(:product_owner, project)
   end
 
   def update_type_desc(ticket)
-    return unless check_role
-
-    ticket.update(ticket_desc)
+    ticket.update(ticket_desc) if check_role
   end
 
   def update_type_name(ticket)
-    return unless check_role
-
-    ticket.update(ticket_name)
+    ticket.update(ticket_name) if check_role
   end
 
   def ticket_status
