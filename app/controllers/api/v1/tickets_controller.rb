@@ -9,7 +9,8 @@ class Api::V1::TicketsController < Api::V1::BaseController
   end
 
   def create
-    return unless user.has_role?(:scrum_master, project) || user.has_role?(:product_owner, project)
+    return unless check_role
+
     new_ticket = project.tickets.create(name: params[:name], user_id: user.id,
                                         description: params[:desc], status: params[:status].to_i)
     render(json: Api::V1::TicketSerializer.new(new_ticket).serialized_json)
@@ -17,20 +18,35 @@ class Api::V1::TicketsController < Api::V1::BaseController
 
   def update
     type = params[:type]
-    return unless user.has_role?(:scrum_master, project) || user.has_role?(:product_owner, project)
     ticket = Ticket.find_by(name: params[:name])
     if type == "1"
-      ticket.update(ticket_name)
+      update_type_name(ticket)
     elsif type == "2"
       ticket.update(ticket_owner)
     elsif type == "3"
       ticket.update(ticket_status)
     else
-      ticket.update(ticket_desc)
+      update_type_desc(ticket)
     end
   end
 
   private
+
+  def check_role
+    user.has_role?(:scrum_master, project) || user.has_role?(:product_owner, project)
+  end
+
+  def update_type_desc(ticket)
+    return unless check_role
+
+    ticket.update(ticket_desc)
+  end
+
+  def update_type_name(ticket)
+    return unless check_role
+
+    ticket.update(ticket_name)
+  end
 
   def ticket_status
     { status: params[:status].to_i }
