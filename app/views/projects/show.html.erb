@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag 'project' %>
+<%= stylesheet_link_tag "project" %>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -16,7 +16,7 @@
           <ul class="navbar-nav mr-auto">
           </ul>
           <form class="form-inline mt-2 mt-md-0">
-            <button class="btn btn-git"><a class="blask-git" href="/"><%= link_to "log out", logout_path %></a></button>
+            <button class="btn btn-git"><a class="blask-git" href="/"><%= link_to "Log out", logout_path %></a></button>
           </form>
         </div>
       </nav>
@@ -26,24 +26,55 @@
       <hr class="featurette-divider">
       <br>
       <div class="project-flex">
-        <div class="single-project" align='center'>
+
+        <div class="single-project tickets">
+
           <% if @tickets.empty? %>
             <h1>Project has no tickets</h1>
           <% else %>
-            <h1><%= @project.name.capitalize %>'s tickets</h1>
-            <% @tickets.each do |ticket| %>
-              <div>
-                <%= ticket.name.capitalize %>
-              </div>
-              <div class="div-flex">
-                <%= ticket.description %>
-              </div>
+            <div class="statused-tickets" align="center">
+              <h1>To Do</h1>
+              <% @tickets.select{ |t| t.status == "todo" }.each do |ticket| %>
+              <%= react_component("Ticket", ticket: ticket ) %>
               <hr class="featurette-divider">
-            <% end %>
-          <% end %>
-        </div>
+              <% end %>
+            </div>
 
-        <div class="single-project" align='center'>
+            <div class="statused-tickets" align="cent">
+              <h1>In progress</h1>
+              <% @tickets.select{|t| t.status == "in_progress"}.each do |ticket| %>
+              <%= react_component("Ticket", ticket: ticket ) %>
+              <hr class="featurette-divider">
+              <% end %>
+            </div>
+
+            <div class="statused-tickets" align="center">
+              <h1>Review</h1>
+              <% @tickets.select{|t| t.status == "review"}.each do |ticket| %>
+              <%= react_component("Ticket", ticket: ticket ) %>
+              <hr class="featurette-divider">
+              <% end %>
+            </div>
+
+            <div class="statused-tickets" align="center">
+              <h1>Done</h1>
+              <% @tickets.select{|t| t.status == "done"}.each do |ticket| %>
+              <%= react_component("Ticket", ticket: ticket ) %>
+              <hr class="featurette-divider">
+              <% end %>
+            </div>
+
+            <div class="statused-tickets" align="center">
+              <h1>Merged</h1>
+              <% @tickets.select{|t| t.status == "merged"}.each do |ticket| %>
+              <hr class="featurette-divider">
+              <% end %>
+            </div>
+
+          </div>
+        <% end %>
+
+        <div class="single-project" align="center">
           <% if @events.empty? %>
             <h1>Project has no events</h1>
           <% else %>
@@ -60,7 +91,7 @@
         </div>
       </div>
       <footer class="footer-bot">
-        <p class="navbar-brand marg-left">AgileCli &copy; 2019 Rubizza &middot; <a href="https://github.com/rubizza-camp/AgileCli/blob/master/LICENSE" style='text-decoration:none; color: white;'>Terms</a></p>
+        <p class="navbar-brand marg-left">AgileCli &copy; 2019 Rubizza &middot; <a href="https://github.com/rubizza-camp/AgileCli/blob/master/LICENSE" style="text-decoration:none; color: white;">Terms</a></p>
       </footer>
 
     </main>

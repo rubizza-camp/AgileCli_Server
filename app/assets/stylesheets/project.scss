@@ -4,10 +4,17 @@
 $black: #1b1b1b;
 $gray: #e4e4e4;
 $orange: #ff6d51;
+$shadow1: rgba(0, 0, 0, 0.14);
+$shadow2: rgba(0, 0, 0, 0.12);
+$shadow3: rgba(0, 0, 0, 0.2);
 
 body {
   background-color: $gray;
   font-family: "Futur";
+}
+
+h1 {
+  font-size: 25px;
 }
 
 .project-flex {
@@ -15,6 +22,15 @@ body {
   flex-direction: row;
   margin-left: 1%;
   margin-right: 1%;
+}
+
+.statused-tickets {
+  width: 20%;
+}
+
+.tickets {
+  display: flex;
+  flex-direction: row;
 }
 
 .single-project:first-child {
@@ -26,23 +42,16 @@ body {
 }
 
 .div-flex {
-  background-color: $black;
-  border: 1px;
+  background-color: $orange;
   border-radius: 5px;
-  color: $gray;
+  box-shadow: 0 16px 24px 2px $shadow1, 0 6px 30px 5px $shadow2, 0 8px 10px -5px $shadow3;
+  color: $black;
   display: flex;
   flex-direction: column;
   margin-bottom: 1%;
   padding-left: 5px;
   text-align: left;
   width: 60%;
-}
-
-
-.projects-list:hover {
-  background-color: $orange;
-  color: $black;
-  text-decoration: none;
 }
 
 .footer-bot {
