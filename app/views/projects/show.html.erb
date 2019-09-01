@@ -16,7 +16,7 @@
           <ul class="navbar-nav mr-auto">
           </ul>
           <form class="form-inline mt-2 mt-md-0">
-            <button class="btn btn-git"><a class="blask-git" href="/"><%= link_to "log out", logout_path %></a></button>
+            <button class="btn btn-git"><a class="blask-git" href="/"><%= link_to "Log out", logout_path %></a></button>
           </form>
         </div>
       </nav>
@@ -78,7 +78,7 @@
           <% if @events.empty? %>
             <h1>Project has no events</h1>
           <% else %>
-            <h1><%= @project.name.capitalize %>"s events</h1>
+            <h1><%= @project.name.capitalize %>'s events</h1>
             <% @events.each do |event| %>
               <div class="div-flex">
                 <%= event.event_type.capitalize %><br>
@@ -90,7 +90,6 @@
           <% end %>
         </div>
       </div>
-
       <footer class="footer-bot">
         <p class="navbar-brand marg-left">AgileCli &copy; 2019 Rubizza &middot; <a href="https://github.com/rubizza-camp/AgileCli/blob/master/LICENSE" style="text-decoration:none; color: white;">Terms</a></p>
       </footer>
