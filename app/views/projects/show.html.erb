@@ -67,6 +67,7 @@
             <div class="statused-tickets" align="center">
               <h1>Merged</h1>
               <% @tickets.select{|t| t.status == "merged"}.each do |ticket| %>
+              <%= react_component("Ticket", ticket: ticket ) %>
               <br>
               <% end %>
             </div>
