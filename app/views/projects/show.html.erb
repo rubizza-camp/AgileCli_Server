@@ -22,8 +22,8 @@
       </nav>
     </header>
     <main role="main">
-      <hr class="featurette-divider">
-      <hr class="featurette-divider">
+      <br>
+      <br>
       <br>
       <div class="project-flex">
 
@@ -36,15 +36,15 @@
               <h1>To Do</h1>
               <% @tickets.select{ |t| t.status == "todo" }.each do |ticket| %>
               <%= react_component("Ticket", ticket: ticket ) %>
-              <hr class="featurette-divider">
+              <br>
               <% end %>
             </div>
 
-            <div class="statused-tickets" align="cent">
+            <div class="statused-tickets" align="center">
               <h1>In progress</h1>
               <% @tickets.select{|t| t.status == "in_progress"}.each do |ticket| %>
               <%= react_component("Ticket", ticket: ticket ) %>
-              <hr class="featurette-divider">
+              <br>
               <% end %>
             </div>
 
@@ -52,7 +52,7 @@
               <h1>Review</h1>
               <% @tickets.select{|t| t.status == "review"}.each do |ticket| %>
               <%= react_component("Ticket", ticket: ticket ) %>
-              <hr class="featurette-divider">
+              <br>
               <% end %>
             </div>
 
@@ -60,14 +60,14 @@
               <h1>Done</h1>
               <% @tickets.select{|t| t.status == "done"}.each do |ticket| %>
               <%= react_component("Ticket", ticket: ticket ) %>
-              <hr class="featurette-divider">
+              <br>
               <% end %>
             </div>
 
             <div class="statused-tickets" align="center">
               <h1>Merged</h1>
               <% @tickets.select{|t| t.status == "merged"}.each do |ticket| %>
-              <hr class="featurette-divider">
+              <br>
               <% end %>
             </div>
 

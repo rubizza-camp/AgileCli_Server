@@ -5,6 +5,11 @@ $black: #1b1b1b;
 $gray: #e4e4e4;
 $orange: #ff6d51;
 
+@font-face {
+  font-family: "Futura";
+  src: asset-url("assets/futura/futur.ttf");
+}
+
 body {
   background-color: $gray;
   font-family: "Futur";
