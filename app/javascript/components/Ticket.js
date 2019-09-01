@@ -12,7 +12,10 @@ const  modal = {
 };
 
 const button = {
-  width: "50px",
+  whiteSpace: "nowrap",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  width: "50%",
   height: "30px",
   border: "1px",
   borderRadius: "4px",
@@ -35,6 +38,7 @@ class Ticket extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      ticketOwner: this.props.ticket.owner,
       ticketName: this.props.ticket.name,
       ticketDescription: this.props.ticket.description,
       isModalOpen: false,
@@ -48,6 +52,8 @@ class Ticket extends React.Component {
         <button style={button} onClick={() => this.openModal()}>{ this.state.ticketName }</button>
         <Description isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
           <h3>{ this.state.ticketName }</h3>
+          <hr></hr>
+          <h5>Owner: { this.state.ticketOwner }</h5>
           <hr></hr>
           <p>{ this.state.ticketDescription }</p>
         </Description>

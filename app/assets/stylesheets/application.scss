@@ -12,3 +12,8 @@
  */
  // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+
+@font-face {
+  font-family: "Futura";
+  src: asset-url("assets/futura/futur.ttf");
+}
